@@ -1,0 +1,379 @@
+:root {
+  box-sizing: border-box;
+}
+
+*,
+::before,
+::after {
+  box-sizing: inherit;
+}
+
+body {
+  font-family: Arial;
+  background: linear-gradient(
+    45deg,
+    rgba(255, 158, 247, 0.589),
+    rgba(144, 238, 144, 0.527)
+  );
+  padding: 0;
+  margin: 0;
+  line-height: 1.5;
+  position: relative;
+}
+
+#container-1st {
+  flex: 2;
+  background: white;
+  margin: 1.5em 1.5em 0 0;
+  border: 3px solid gray;
+  padding: 1.5em 1em;
+  border-radius: 1em;
+  box-shadow: 3px 3px 20px grey;
+  min-height: 50vh;
+}
+
+#container-2nd {
+  flex: 1.5;
+  background: white;
+  margin-top: 1.5em;
+  padding: 1.5em 1em;
+  border: 3px solid gray;
+  border-radius: 1em;
+  box-shadow: 3px 3px 20px grey;
+  min-height: 50vh;
+}
+
+#heading {
+  text-align: center;
+  margin: 0;
+  font-size: 2.5em;
+  color: white;
+}
+
+#heading span {
+  font-size: 0.3em;
+  color: orangered;
+  background-color: white;
+  padding: 0.2em;
+  border-radius: 0.2em;
+}
+
+#sub-heading {
+  text-align: center;
+  margin-top: 0;
+}
+
+.wrapper {
+  display: flex;
+  width: 80%;
+  margin: 0 auto;
+  /* margin-bottom: 2em; */
+}
+
+.ribbon {
+  height: 6px;
+  background: linear-gradient(50deg, yellow, violet, skyblue, grey, orange);
+}
+
+#header-banner {
+  background-color: rgb(0, 177, 0);
+  padding: 2em;
+  margin: 0 auto;
+  border-radius: 0 0 7px 7px;
+}
+
+header {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+input[type="search"] {
+  border: none;
+  outline: none;
+  border-radius: 5px;
+  font-size: 15px;
+  padding: 8px 15px;
+}
+
+ul {
+  list-style-type: none;
+  margin-left: 0;
+  padding-left: 0;
+}
+ul li {
+  padding: 0 1em;
+}
+
+.task-card {
+  font-size: 1em;
+  padding: 0.5em 1em;
+  border-left: 5px solid rgba(200, 35, 118, 0.986);
+  margin-top: 1em;
+  white-space: normal;
+  box-shadow: 3px 3px 10px grey;
+  background-color: #f4f4f4;
+}
+.task-card:hover {
+  border-left: 5px solid springgreen;
+  transition: all 500ms linear;
+}
+
+.title {
+  color: rgb(82, 78, 78);
+  text-align: center;
+  text-transform: uppercase;
+  margin: 0;
+  text-shadow: 2px 2px 0 black;
+}
+
+#schedule {
+  border: 1px solid grey;
+  outline: none;
+  font-size: 15px;
+  padding: 0.5em;
+  border-radius: 0.5em;
+  width: 100%;
+  border-radius: 0.5em 0.5em 0 0;
+  resize: vertical;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+#add-schedule {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 1.5em;
+}
+
+#add-schedule #hide {
+  margin-bottom: 1em;
+}
+.add {
+  width: 70%;
+  display: flex;
+  flex-direction: column;
+  margin-top: 0;
+}
+
+button {
+  padding: 10px 15px;
+  background: green;
+  border: none;
+  outline: none;
+  border-radius: 0 0 0.5em 0.5em;
+  display: block;
+  color: white;
+  cursor: pointer;
+  width: 100%;
+}
+
+button:hover {
+  background: rgb(23, 185, 2);
+  transition: all 400ms linear;
+}
+/* options */
+.options {
+  display: flex;
+  align-items: center;
+  margin-top: 0.5em;
+  background: linear-gradient(45deg, rgb(201, 90, 201), lightgrey);
+  padding: 0.5em 1em;
+}
+.fa-trash,
+.fa-edit {
+  cursor: pointer;
+}
+
+.fa-facebook {
+  color: blue;
+}
+.fa-twitter {
+  color: rgb(44, 176, 228);
+}
+.fa-linkedin {
+  color: rgb(29, 163, 216);
+}
+.options i {
+  margin-right: 0.7em;
+  color: white;
+  align-items: center;
+}
+
+.done-btn {
+  background-color: limegreen;
+  padding: 0.5em;
+  color: white;
+  border-radius: 5px;
+  cursor: pointer;
+  margin-left: auto;
+}
+
+.done-btn:hover {
+  background-color: rgb(6, 223, 6);
+}
+
+/* The container */
+.container {
+  display: block;
+  position: relative;
+  padding-left: 35px;
+  margin-bottom: 12px;
+  cursor: pointer;
+  font-size: 17px;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+
+/* Hide the browser's default checkbox */
+.container input {
+  position: absolute;
+  opacity: 0;
+  cursor: pointer;
+  height: 0;
+  width: 0;
+}
+
+/* Create a custom checkbox */
+.checkmark {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 25px;
+  width: 25px;
+  background-color: lightgreen;
+}
+
+/* On mouse-over, add a grey background color */
+.container:hover input ~ .checkmark {
+  background-color: #ccc;
+}
+
+/* When the checkbox is checked, add a blue background */
+.container input:checked ~ .checkmark {
+  background-color: rgb(40, 190, 40);
+}
+
+/* Create the checkmark/indicator (hidden when not checked) */
+.checkmark:after {
+  content: "";
+  position: absolute;
+  display: none;
+}
+
+/* Show the checkmark when checked */
+.container input:checked ~ .checkmark:after {
+  display: block;
+}
+
+/* Style the checkmark/indicator */
+.container .checkmark:after {
+  left: 9px;
+  top: 7px;
+  width: 5px;
+  height: 10px;
+  border: solid white;
+  border-width: 0 3px 3px 0;
+  -webkit-transform: rotate(45deg);
+  -ms-transform: rotate(45deg);
+  transform: rotate(45deg);
+}
+/* end of customized checkbox */
+
+/* end of options */
+/* footer */
+.footer {
+  background-color: rgba(0, 128, 0, 0.377);
+  padding: 0.5em 0;
+  color: #fff;
+  text-align: center;
+  border-radius: 7px 7px 0 0;
+  margin-top: 1.5em;
+  position: sticky;
+  bottom: 0;
+}
+.footer a {
+  color: black;
+  background-color: #fff;
+  padding: 0.3em;
+  border-radius: 3px;
+  text-decoration: none;
+}
+.footer span a {
+  background-color: white;
+  padding: 0.3em;
+  border-radius: 50%;
+}
+/* media queries */
+
+/* @media screen and (max-width: 600px) {
+}
+
+@media screen and (max-width: 900px) {
+}
+
+@media screen and (max-width: 1000px) {
+} */
+
+/* // Extra small devices (portrait phones, less than 576px) */
+
+/* // Medium devices (tablets, less than 992px) */
+@media (max-width: 991.98px) {
+  .wrapper {
+    width: 90%;
+  }
+
+  .add {
+    width: 90%;
+  }
+
+  #container-1st {
+    flex: 1.2;
+  }
+  #container-2nd {
+    flex: 1;
+  }
+}
+/* // Small devices (landscape phones, less than 768px) */
+@media (max-width: 767.98px) {
+  .wrapper {
+    width: 80%;
+    flex-direction: column;
+  }
+
+  #container-1st {
+    margin-right: 0;
+  }
+  .add {
+    width: 80%;
+  }
+}
+
+@media (max-width: 575.98px) {
+  .wrapper {
+    width: 90%;
+    flex-direction: column;
+  }
+
+  #container-1st {
+    margin-right: 0;
+  }
+
+  #heading {
+    text-align: center;
+    margin: 0;
+    font-size: 2.2em;
+    color: white;
+  }
+
+  .add {
+    width: 90%;
+  }
+}
+
+/* // Large devices (desktops, less than 1200px) */
+/* @media (max-width: 1199.98px) {
+} */

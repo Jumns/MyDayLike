@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8" />
+    <title>My DayLike</title>
+    <link rel="stylesheet" href="main.css" />
+    <!-- <link rel="stylesheet" href="./fontawesome/css/all.min.css" /> -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.14.0/css/all.min.css"
+    />
+  </head>
+  <body>
+    <!-- header banner -->
+    <div class="ribbon"></div>
+    <div id="header-banner">
+      <header>
+        <div class="headigs">
+          <h2 id="heading">
+            My DayLike<sup><span>BETA</span></sup>
+          </h2>
+          <p id="sub-heading">"I don't exist, I live!"</p>
+        </div>
+        <input
+          type="search"
+          id="search"
+          name=""
+          placeholder="search keywords..."
+        />
+      </header>
+    </div>
+    <!-- header banner -->
+
+    <div class="wrapper">
+      <div id="container-1st">
+        <h2 class="title">Schedules Queue</h2>
+        <!-- schedule -->
+        <ul>
+          <li>
+            <div class="task-card">
+              <p class="Schedule">
+                Hello, edit or delete me to add your Schedules. Just do your
+                thang! ;)
+              </p>
+              <div class="options">
+                <div class="icons">
+                  <i class="fa fa-trash" title="Delete"></i>
+                  <i class="fa fa-edit" title="Edit"></i>
+                  <i class="far fa-clock"></i>
+                </div>
+                <span class="fa fa-check done-btn" title="Done"></span>
+              </div>
+            </div>
+          </li>
+        </ul>
+
+        <!-- add schedule -->
+        <form id="add-schedule">
+          <label class="container"
+            >Hide Schedules
+            <input type="checkbox" id="hide" />
+            <span class="checkmark"></span>
+          </label>
+          <div class="add">
+            <textarea
+              name=""
+              id="schedule"
+              placeholder="Enter Schedule..."
+            ></textarea>
+            <button>ADD TO LIST</button>
+          </div>
+        </form>
+        <!-- end of add schedule -->
+      </div>
+      <div id="container-2nd">
+        <h2 class="title">Finished Schedules</h2>
+        <!-- schedule -->
+        <ul>
+          <!-- <li>
+              <div class="task-card">
+                <p class="Schedule">
+                  <del>Hello, edit me and add your Schedules.</del>
+                </p>
+                <div class="options">
+                  <i class="far fa-clock"> 00:00 hr ago</i>
+
+                  <span class="fa fa-undo done-btn" title="undo"></span>
+                </div>
+              </div>
+            </li> -->
+        </ul>
+      </div>
+    </div>
+    <section>
+      <footer class="footer">
+        <div>
+          <p>&copy; My DayLike 2020, All rights reserved.</p>
+          <p style="word-spacing: 5px;">
+            <i class="fa fa-code" style="color: red;" title="Developed "></i>
+            By
+            <a href="#">Nathan</a>
+            <span>
+              <a href="https://twitter.com/Mr_Jumns"
+                ><i class="fab fa-twitter" title="Twitter"></i
+              ></a>
+              <a href="https://web.facebook.com/profile.php?id=100006975976960"
+                ><i class="fab fa-facebook" title="Facebook"></i
+              ></a>
+              <a href="https://www.linkedin.com/in/nathan-jumns-1210801aa/"
+                ><i class="fab fa-linkedin" title="Linkedin"></i
+              ></a>
+            </span>
+          </p>
+        </div>
+      </footer>
+    </section>
+    <script src="app.js"></script>
+  </body>
+</html>
