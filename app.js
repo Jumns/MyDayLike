@@ -10,7 +10,7 @@ if (container) {
         const li = e.target.closest("li");
         container.removeChild(li);
 
-        const schedule = li.querySelector(".Schedule");
+        const schedule = li.querySelector(".schedule");
         schedule.innerHTML = `<del>${schedule.textContent}</del>`;
         const option = li.querySelector(".options");
         option.innerHTML = `
@@ -41,12 +41,10 @@ if (secondContainer) {
   secondContainer.addEventListener("click", function (e) {
     if (e.target.className == "fa fa-undo done-btn") {
       if (confirm("Sure to undo?")) {
-        // const li = e.target.parentElement.parentElement.parentElement;
-        // use target.closest when the parent element are different
         const li = e.target.closest("li");
         secondContainer.removeChild(li);
 
-        const schedule = li.querySelector(".Schedule");
+        const schedule = li.querySelector(".schedule");
         // schedule.innerHTML = `<del>${schedule.textContent}</del>`;
         schedule.innerHTML = schedule.textContent;
         const option = li.querySelector(".options");
@@ -187,11 +185,9 @@ if (container) {
   container.addEventListener("click", function (e) {
     if (e.target.className == "fa fa-edit") {
       const li = e.target.closest("li");
-      const schedule = li.querySelector(".Schedule");
+      const schedule = li.querySelector(".schedule");
       let updatedTodo = prompt("Edit Todo", schedule.textContent);
       if (updatedTodo) {
-        // const li = e.target.parentElement.parentElement.parentElement;
-        // use target.closest when the parent element are different
         schedule.textContent = updatedTodo;
       }
     }

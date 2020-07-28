@@ -125,7 +125,7 @@ ul li {
   text-align: center;
   text-transform: uppercase;
   margin: 0;
-  text-shadow: 2px 2px 0 black;
+  text-shadow: 1px 1px 0 black;
 }
 
 #schedule {
@@ -242,9 +242,9 @@ button:hover {
   position: absolute;
   top: 0;
   left: 0;
-  height: 25px;
-  width: 25px;
-  background-color: lightgreen;
+  height: 20px;
+  width: 20px;
+  background-color: rgba(144, 238, 144, 0.856);
 }
 
 /* On mouse-over, add a grey background color */
@@ -309,17 +309,6 @@ button:hover {
 }
 /* media queries */
 
-/* @media screen and (max-width: 600px) {
-}
-
-@media screen and (max-width: 900px) {
-}
-
-@media screen and (max-width: 1000px) {
-} */
-
-/* // Extra small devices (portrait phones, less than 576px) */
-
 /* // Medium devices (tablets, less than 992px) */
 @media (max-width: 991.98px) {
   .wrapper {
@@ -341,11 +330,15 @@ button:hover {
 @media (max-width: 767.98px) {
   .wrapper {
     width: 80%;
-    flex-direction: column;
+    display: block;
   }
 
   #container-1st {
     margin-right: 0;
+    flex: 1;
+  }
+  #container-2nd {
+    flex: 1;
   }
   .add {
     width: 80%;
@@ -355,7 +348,7 @@ button:hover {
 @media (max-width: 575.98px) {
   .wrapper {
     width: 90%;
-    flex-direction: column;
+    display: block;
   }
 
   #container-1st {
