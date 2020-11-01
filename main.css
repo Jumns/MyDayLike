@@ -103,9 +103,18 @@ header {
   align-items: center;
 }
 
+.fa-search {
+  padding: 0.6em;
+  cursor: pointer;
+}
+
 #search-box {
+  background-color: white;
+  display: flex;
+  align-items: center;
   width: 50vw;
   margin: 0.5em auto;
+  padding: 0 0.5em;
 }
 input[type="search"] {
   border: none;
@@ -122,7 +131,7 @@ ul {
   padding-left: 0;
 }
 ul li {
-  padding: 0 1em;
+  padding: 0 0.3em;
 }
 
 .task-card {
@@ -351,7 +360,7 @@ button:hover {
 /* // Small devices (landscape phones, less than 768px) */
 @media (max-width: 767.98px) {
   #search-box {
-    width: 85vw;
+    width: 84vw;
     margin: 0.5em auto;
   }
 
