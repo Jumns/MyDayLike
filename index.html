@@ -5,12 +5,18 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>My DayLike</title>
     <link rel="stylesheet" href="main.css" />
-    <!-- <link rel="stylesheet" href="../fontawesome/css/all.min.css" /> -->
+    <link rel="stylesheet" href="./fontawesome/css/all.css" />
     <link
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.14.0/css/all.min.css"
     />
+
+    <link
+      href="https://fonts.googleapis.com/css2?family=Orbitron&display=swap"
+      rel="stylesheet"
+    />
   </head>
+
   <body>
     <!-- header banner -->
     <div class="ribbon"></div>
@@ -20,15 +26,14 @@
           <h2 id="heading">
             My DayLike<sup><span>BETA</span></sup>
           </h2>
-          <p id="sub-heading">"I don't exist, I live!"</p>
+          <div class="clock-wrapper">
+            <p class="time"></p>
+          </div>
         </div>
-        <input
-          type="search"
-          id="search"
-          name=""
-          placeholder="search keywords..."
-        />
       </header>
+      <form id="search-box">
+        <input type="search" placeholder="search keywords..." />
+      </form>
     </div>
     <!-- header banner -->
 
@@ -76,28 +81,19 @@
       <div id="container-2nd">
         <h2 class="title">Finished Schedules</h2>
         <!-- schedule -->
-        <ul>
-          <!-- <li>
-              <div class="task-card">
-                <p class="schedule">
-                  <del>Hello, edit me and add your Schedules.</del>
-                </p>
-                <div class="options">
-                  <i class="far fa-clock"> 00:00 hr ago</i>
-
-                  <span class="fa fa-undo done-btn" title="undo"></span>
-                </div>
-              </div>
-            </li> -->
-        </ul>
+        <ul></ul>
       </div>
     </div>
     <section>
       <footer class="footer">
         <div>
-          <p>&copy; My DayLike 2020, All rights reserved.</p>
-          <p style="word-spacing: 5px;">
-            <i class="fa fa-code" style="color: red;" title="Developed "></i>
+          <p>&copy; Copyright My DayLike 2020, All rights reserved.</p>
+          <p style="word-spacing: 5px">
+            <i
+              class="fa fa-code"
+              style="color: red; cursor: help"
+              title="Developed "
+            ></i>
             By
             <a href="#">Nathan</a>
             <span>

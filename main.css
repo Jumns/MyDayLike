@@ -10,11 +10,7 @@
 
 body {
   font-family: Arial;
-  background: linear-gradient(
-    45deg,
-    rgba(255, 158, 247, 0.589),
-    rgba(144, 238, 144, 0.527)
-  );
+  background-color: #ebd4d4;
   padding: 0;
   margin: 0;
   line-height: 1.5;
@@ -25,10 +21,10 @@ body {
   flex: 2;
   background: white;
   margin: 1.5em 1.5em 0 0;
-  border: 3px solid gray;
+  border: 1px solid gray;
   padding: 1.5em 1em;
   border-radius: 1em;
-  box-shadow: 3px 3px 20px grey;
+  box-shadow: 2px 2px 10px grey;
   min-height: 50vh;
 }
 
@@ -37,9 +33,9 @@ body {
   background: white;
   margin-top: 1.5em;
   padding: 1.5em 1em;
-  border: 3px solid gray;
+  border: 1px solid gray;
   border-radius: 1em;
-  box-shadow: 3px 3px 20px grey;
+  box-shadow: 2px 2px 10px grey;
   min-height: 50vh;
 }
 
@@ -57,29 +53,47 @@ body {
   padding: 0.2em;
   border-radius: 0.2em;
 }
+/* clock */
 
-#sub-heading {
+.time {
   text-align: center;
-  margin-top: 0;
+  font-size: 1.1em 1.3em;
+  font-size: 1.2em;
+  font-family: Orbitron, sans-serif;
 }
+
+.clock-wrapper {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 220px;
+  margin: 10px auto;
+  background: #ebd4d4;
+  color: black;
+  border-radius: 5px;
+  box-shadow: 2px 2px 5px rgb(59, 58, 58);
+}
+
+/* end of clock */
 
 .wrapper {
   display: flex;
   width: 80%;
-  margin: 0 auto;
-  /* margin-bottom: 2em; */
+  margin: 3em auto;
 }
 
 .ribbon {
-  height: 6px;
-  background: linear-gradient(50deg, yellow, violet, skyblue, grey, orange);
+  height: 3px;
+  background: linear-gradient(50deg, #fff0f0, #463333, #fff0f0);
 }
 
 #header-banner {
-  background-color: rgb(0, 177, 0);
+  background: linear-gradient(rgba(0, 0, 0, 0.376), rgba(0, 0, 0, 0.397)),
+    url(./BackgroundPattern.htm);
+  /* background-color: #835858; */
   padding: 2em;
   margin: 0 auto;
-  border-radius: 0 0 7px 7px;
+  border-radius: 0 0 10px 10px;
 }
 
 header {
@@ -89,12 +103,17 @@ header {
   align-items: center;
 }
 
+#search-box {
+  width: 50vw;
+  margin: 0.5em auto;
+}
 input[type="search"] {
   border: none;
   outline: none;
   border-radius: 5px;
   font-size: 15px;
-  padding: 8px 15px;
+  padding: 15px 15px;
+  width: 100%;
 }
 
 ul {
@@ -109,7 +128,7 @@ ul li {
 .task-card {
   font-size: 1em;
   padding: 0.5em 1em;
-  border-left: 5px solid rgba(200, 35, 118, 0.986);
+  border-left: 5px solid #463333;
   margin-top: 1em;
   white-space: normal;
   box-shadow: 3px 3px 10px grey;
@@ -133,9 +152,7 @@ ul li {
   outline: none;
   font-size: 15px;
   padding: 0.5em;
-  border-radius: 0.5em;
   width: 100%;
-  border-radius: 0.5em 0.5em 0 0;
   resize: vertical;
   font-family: Arial, Helvetica, sans-serif;
 }
@@ -159,10 +176,9 @@ ul li {
 
 button {
   padding: 10px 15px;
-  background: green;
+  background: #835858;
   border: none;
   outline: none;
-  border-radius: 0 0 0.5em 0.5em;
   display: block;
   color: white;
   cursor: pointer;
@@ -170,7 +186,8 @@ button {
 }
 
 button:hover {
-  background: rgb(23, 185, 2);
+  background: #ebd4d4;
+  color: #463333;
   transition: all 400ms linear;
 }
 /* options */
@@ -178,7 +195,7 @@ button:hover {
   display: flex;
   align-items: center;
   margin-top: 0.5em;
-  background: linear-gradient(45deg, rgb(201, 90, 201), lightgrey);
+  background: linear-gradient(45deg, #835858, lightgrey);
   padding: 0.5em 1em;
 }
 .fa-trash,
@@ -272,9 +289,9 @@ button:hover {
 /* Style the checkmark/indicator */
 .container .checkmark:after {
   left: 7px;
-  top: 5px;
-  width: 5px;
-  height: 10px;
+  top: 3px;
+  width: 6px;
+  height: 12px;
   border: solid white;
   border-width: 0 3px 3px 0;
   -webkit-transform: rotate(45deg);
@@ -286,7 +303,7 @@ button:hover {
 /* end of options */
 /* footer */
 .footer {
-  background-color: rgba(0, 128, 0, 0.377);
+  background-color: #463333;
   padding: 0.5em 0;
   color: #fff;
   text-align: center;
@@ -311,8 +328,13 @@ button:hover {
 
 /* // Medium devices (tablets, less than 992px) */
 @media (max-width: 991.98px) {
+  #search-box {
+    width: 60vw;
+    margin: 0.5em auto;
+  }
+
   .wrapper {
-    width: 90%;
+    width: 95%;
   }
 
   .add {
@@ -328,8 +350,13 @@ button:hover {
 }
 /* // Small devices (landscape phones, less than 768px) */
 @media (max-width: 767.98px) {
+  #search-box {
+    width: 85vw;
+    margin: 0.5em auto;
+  }
+
   .wrapper {
-    width: 80%;
+    width: 88%;
     display: block;
   }
 
@@ -347,7 +374,7 @@ button:hover {
 
 @media (max-width: 575.98px) {
   .wrapper {
-    width: 90%;
+    width: 95%;
     display: block;
   }
 

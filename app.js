@@ -47,8 +47,8 @@ if (secondContainer) {
         const schedule = li.querySelector(".schedule");
         // schedule.innerHTML = `<del>${schedule.textContent}</del>`;
         schedule.innerHTML = schedule.textContent;
-        const option = li.querySelector(".options");
-        option.innerHTML = `
+        const options = li.querySelector(".options");
+        options.innerHTML = `
           <div class="icons">
             <i class="fa fa-trash" title="Delete"></i>
             <i class="fa fa-edit" title="Edit"></i>
@@ -122,18 +122,23 @@ form.addEventListener("submit", function (e) {
   timeStamp.appendChild(document.createTextNode(" " + time()));
 
   // append new elements
-  taskCard.appendChild(schedule);
-  taskCard.appendChild(options);
-  options.appendChild(optionIcons);
-  options.appendChild(doneBtn);
-  optionIcons.appendChild(deleteIcon);
-  optionIcons.appendChild(editIcon);
-  optionIcons.appendChild(timeStamp);
+  if (value === "") {
+    alert("Please Enter a valid schedule.");
+    return false;
+  }
+  {
+    taskCard.appendChild(schedule);
+    taskCard.appendChild(options);
+    options.appendChild(optionIcons);
+    options.appendChild(doneBtn);
+    optionIcons.appendChild(deleteIcon);
+    optionIcons.appendChild(editIcon);
+    optionIcons.appendChild(timeStamp);
 
-  // appendChild to parent
-  li.append(taskCard);
-  container.appendChild(li);
-  console.log(li);
+    // appendChild to parent
+    li.append(taskCard);
+    container.appendChild(li);
+  }
 
   // clearing value from textarea
   form.querySelector("textarea").value = "";
@@ -173,9 +178,6 @@ function time() {
     dn = "am";
   }
 
-  if (Number(m) < 10) {
-    m = "0" + m;
-  }
   let formattedTime = h + ":" + m + " " + dn;
   return formattedTime;
 }
@@ -210,3 +212,44 @@ function filterItems(e) {
     }
   });
 }
+
+//clock
+function displayTime() {
+  ("use strick");
+  let d = new Date();
+  let a_p = "";
+  let hour = d.getHours();
+  let minute = d.getMinutes();
+  let sec = d.getSeconds();
+
+  if (hour < 12) {
+    a_p = " am";
+  } else {
+    a_p = " pm";
+  }
+
+  if (hour == 0) {
+    hour = 12;
+  }
+
+  if (hour > 12) {
+    hour = hour - 12;
+  }
+
+  hour = checkTime(hour);
+  minute = checkTime(minute);
+  sec = checkTime(sec);
+
+  function checkTime(i) {
+    if (i < 10) {
+      i = "0" + i;
+    }
+    return i;
+  }
+  let time = hour + " : " + minute + " : " + sec + a_p;
+
+  const printTime = document.querySelector(".time");
+
+  printTime.textContent = time;
+}
+setInterval(displayTime, 1000);
