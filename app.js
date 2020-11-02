@@ -122,10 +122,11 @@ form.addEventListener("submit", function (e) {
   timeStamp.appendChild(document.createTextNode(" " + time()));
 
   // append new elements
-  if (value === "") {
+  if (value.trim() === null || value.trim() === "") {
     alert("Please Enter a valid schedule.");
     return false;
   }
+
   {
     taskCard.appendChild(schedule);
     taskCard.appendChild(options);
