@@ -17,25 +17,31 @@ body {
   position: relative;
 }
 
+p {
+  color: rgb(95, 92, 92);
+}
+
 #container-1st {
+  /* display: none; */
   flex: 2;
-  background: white;
+  /* background: white; */
   margin: 1.5em 1.5em 0 0;
-  border: 1px solid gray;
+  /* border: 1px solid gray; */
   padding: 1.5em 1em;
   border-radius: 1em;
-  box-shadow: 2px 2px 10px grey;
+  /* box-shadow: 2px 2px 10px grey; */
   min-height: 50vh;
 }
 
 #container-2nd {
+  /* display: none; */
   flex: 1.5;
-  background: white;
+  /* background: white; */
   margin-top: 1.5em;
   padding: 1.5em 1em;
-  border: 1px solid gray;
+  /* border: 1px solid gray; */
   border-radius: 1em;
-  box-shadow: 2px 2px 10px grey;
+  /* box-shadow: 2px 2px 10px grey; */
   min-height: 50vh;
 }
 
@@ -52,6 +58,15 @@ body {
   background-color: white;
   padding: 0.2em;
   border-radius: 0.2em;
+}
+
+.schedule {
+  font-size: 1.1rem;
+  line-height: 1.7;
+}
+
+.schedule.fade {
+  opacity: 0.7;
 }
 /* clock */
 
@@ -144,7 +159,8 @@ ul li {
   background-color: #f4f4f4;
 }
 .task-card:hover {
-  border-left: 5px solid springgreen;
+  border-left: 5px solid burlywood;
+  background-color: white;
   transition: all 500ms linear;
 }
 
@@ -153,45 +169,49 @@ ul li {
   text-align: center;
   text-transform: uppercase;
   margin: 0;
-  text-shadow: 1px 1px 0 black;
+  margin-bottom: 2rem;
+  text-shadow: 2px 2px 5px grey;
+  background-color: whitesmoke;
+  padding: 1rem 0;
+  font-size: 1.2rem;
+  box-shadow: 0 5px 10px grey;
 }
 
 #schedule {
-  border: 1px solid grey;
+  border: none;
   outline: none;
   font-size: 15px;
-  padding: 0.5em;
   width: 100%;
   resize: vertical;
   font-family: Arial, Helvetica, sans-serif;
+  padding: 0.5em;
+  padding-bottom: 0;
 }
 
 #add-schedule {
   display: flex;
   flex-direction: column;
   align-items: center;
-  margin-top: 1.5em;
+  margin-top: 2.5em;
 }
 
-#add-schedule #hide {
-  margin-bottom: 1em;
-}
 .add {
-  width: 70%;
+  width: 100%;
   display: flex;
-  flex-direction: column;
+  background-color: white;
   margin-top: 0;
+  margin: 5px;
 }
 
 button {
-  padding: 10px 15px;
+  padding: 3px 5px;
   background: #835858;
   border: none;
   outline: none;
   display: block;
   color: white;
   cursor: pointer;
-  width: 100%;
+  width: 20%;
 }
 
 button:hover {
@@ -207,24 +227,41 @@ button:hover {
   background: linear-gradient(45deg, #835858, lightgrey);
   padding: 0.5em 1em;
 }
+
+.options * + * {
+  margin-left: 0.5rem;
+}
+
 .fa-trash,
 .fa-edit {
   cursor: pointer;
 }
 
-.fa-facebook {
-  color: blue;
+.fa-trash:hover {
+  color: rgb(253, 94, 94);
+  transition: 0.4s;
 }
+
+.fa-edit:hover {
+  color: lightgreen;
+  transition: 0.4s;
+}
+
+.fa-facebook {
+  color: rgb(48, 48, 219);
+}
+
 .fa-twitter {
   color: rgb(44, 176, 228);
 }
+
 .fa-linkedin {
   color: rgb(29, 163, 216);
 }
-.options i {
-  margin-right: 0.7em;
+
+.options i,
+span {
   color: white;
-  align-items: center;
 }
 
 .done-btn {
@@ -242,7 +279,7 @@ button:hover {
 
 /* The container */
 .container {
-  display: block;
+  display: none;
   position: relative;
   padding-left: 35px;
   margin-bottom: 12px;
@@ -313,13 +350,17 @@ button:hover {
 /* footer */
 .footer {
   background-color: #463333;
-  padding: 0.5em 0;
+  padding: 2em 0;
   color: #fff;
   text-align: center;
   border-radius: 7px 7px 0 0;
   margin-top: 1.5em;
   position: sticky;
   bottom: 0;
+}
+
+.footer p {
+  color: white;
 }
 .footer a {
   color: black;
@@ -328,9 +369,10 @@ button:hover {
   border-radius: 3px;
   text-decoration: none;
 }
+
 .footer span a {
   background-color: white;
-  padding: 0.3em;
+  padding: 0.5em;
   border-radius: 50%;
 }
 /* media queries */
@@ -402,7 +444,3 @@ button:hover {
     width: 90%;
   }
 }
-
-/* // Large devices (desktops, less than 1200px) */
-/* @media (max-width: 1199.98px) {
-} */

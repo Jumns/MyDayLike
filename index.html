@@ -5,7 +5,6 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>My DayLike</title>
     <link rel="stylesheet" href="main.css" />
-    <link rel="stylesheet" href="./fontawesome/css/all.css" />
     <link
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.14.0/css/all.min.css"
@@ -15,6 +14,7 @@
       href="https://fonts.googleapis.com/css2?family=Orbitron&display=swap"
       rel="stylesheet"
     />
+
   </head>
 
   <body>
@@ -24,7 +24,7 @@
       <header>
         <div class="headigs">
           <h2 id="heading">
-            My DayLike<sup><span>BETA</span></sup>
+            My DayLike<sup><span>ALPHA</span></sup>
           </h2>
           <div class="clock-wrapper">
             <p class="time"></p>
@@ -48,13 +48,14 @@
               <p class="schedule">
                 Hello, edit or delete me to add your Schedules. Just do your
                 thang! ;)
+                <a href="localStorage.html">click here</a>
               </p>
               <div class="options">
                 <div class="icons">
                   <i class="fa fa-trash" title="Delete"></i>
                   <i class="fa fa-edit" title="Edit"></i>
                 </div>
-                <i class="far fa-clock"> 00:00</i>
+                <span class="far fa-clock"> 00:00</span>
                 <span class="fa fa-check done-btn" title="Done"></span>
               </div>
             </div>
@@ -63,18 +64,13 @@
 
         <!-- add schedule -->
         <form id="add-schedule">
-          <label class="container"
-            >Hide Schedules
-            <input type="checkbox" id="hide" />
-            <span class="checkmark"></span>
-          </label>
           <div class="add">
             <textarea
               name=""
               id="schedule"
               placeholder="Enter Schedule..."
             ></textarea>
-            <button>ADD TO LIST</button>
+            <button><i class="fas fa-plus"></i></button>
           </div>
         </form>
         <!-- end of add schedule -->
@@ -88,7 +84,7 @@
     <section>
       <footer class="footer">
         <div>
-          <p>&copy; Copyright My DayLike 2020, All rights reserved.</p>
+          <p>&copy; 2021 My DayLike.</p>
           <p style="word-spacing: 5px">
             <i
               class="fa fa-code"
@@ -96,7 +92,7 @@
               title="Developed "
             ></i>
             By
-            <a href="#">Nathan</a>
+            <a href="https://jnathan.com.ng">Nathan</a>
             <span>
               <a href="https://twitter.com/Mr_Jumns"
                 ><i class="fab fa-twitter" title="Twitter"></i
@@ -105,7 +101,7 @@
                 ><i class="fab fa-facebook" title="Facebook"></i
               ></a>
               <a href="https://www.linkedin.com/in/nathan-jumns-1210801aa/"
-                ><i class="fab fa-linkedin" title="Linkedin"></i
+                ><i class="fab fa-linkedin" title="LinkedIn"></i
               ></a>
             </span>
           </p>
