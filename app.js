@@ -1,6 +1,7 @@
 // done-btn //
 const container = document.querySelector(".wrapper ul");
 const secondContainer = document.querySelector("#container-2nd ul");
+
 if (container) {
   container.addEventListener("click", function (e) {
     if (e.target.className == "fa fa-check done-btn") {
@@ -62,10 +63,7 @@ if (container) {
       if (confirm("want to delete me?")) {
         const li = e.target.closest("li");
         container.removeChild(li);
-        schedules.forEach((schedule) => {
-          localStorage.removeItem(schedule);
-        });
-        localStorage.removeItem(schedules.forEach(schedule));
+        removeSchedules(schedule);
       }
     }
   });
@@ -221,7 +219,6 @@ function filterItems(e) {
 
 //clock
 function displayTime() {
-  ("use strick");
   let d = new Date();
   let a_p = "";
   let hour = d.getHours();
@@ -340,4 +337,19 @@ function getSchedules() {
       container.appendChild(li);
     }
   });
+}
+
+// remove Item
+function removeSchedules(Schedule) {
+  // check if there's anything saved
+  let schedules;
+  if (localStorage.getItem("schedules")) {
+    schedules = JSON.parse(localStorage.getItem("schedules"));
+  } else {
+    schedules = [];
+  }
+
+  const scheduleIndex = container.children[0].innerText;
+  schedules.splice(schedules.indexOf(scheduleIndex), 1);
+  localStorage.setItem("schedules", JSON.stringify(schedules));
 }

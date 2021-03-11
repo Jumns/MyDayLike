@@ -10,35 +10,32 @@
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.14.0/css/all.min.css"
     />
 
-    <link
-      href="https://fonts.googleapis.com/css2?family=Orbitron&display=swap"
-      rel="stylesheet"
-    />
-
+    <link rel="stylesheet" href="./fontawesome/css/all.css" />
   </head>
 
   <body>
     <!-- header banner -->
+    <!-- <div class="github" title="view source code">
+      <a href=""><i class="fab fa-github"></i></a>
+    </div> -->
     <div class="ribbon"></div>
     <div id="header-banner">
       <header>
-        <div class="headigs">
-          <h2 id="heading">
-            My DayLike<sup><span>ALPHA</span></sup>
-          </h2>
-          <div class="clock-wrapper">
-            <p class="time"></p>
-          </div>
+        <h2 id="app-name">
+          My DayLike<sup><span>ALPHA</span></sup>
+        </h2>
+        <div class="clock-wrapper">
+          <span class="time"></span>
+        </div>
+        <div id="search-box">
+          <input type="search" placeholder="search keywords... coming soon" />
+          <i class="fa fa-search"></i>
         </div>
       </header>
-      <form id="search-box">
-        <input type="search" placeholder="search keywords..." />
-        <i class="fa fa-search"></i>
-      </form>
     </div>
     <!-- header banner -->
-
-    <div class="wrapper">
+    <section class="wrapper">
+      <!-- <a href="index.html">Home</a> -->
       <div id="container-1st">
         <h2 class="title">Schedules Queue</h2>
         <!-- schedule -->
@@ -47,8 +44,7 @@
             <div class="task-card">
               <p class="schedule">
                 Hello, edit or delete me to add your Schedules. Just do your
-                thang! ;)
-                <a href="localStorage.html">click here</a>
+                thang! 😃
               </p>
               <div class="options">
                 <div class="icons">
@@ -64,35 +60,38 @@
 
         <!-- add schedule -->
         <form id="add-schedule">
-          <div class="add">
-            <textarea
-              name=""
-              id="schedule"
-              placeholder="Enter Schedule..."
-            ></textarea>
-            <button><i class="fas fa-plus"></i></button>
-          </div>
+          <textarea
+            name=""
+            id="schedule"
+            placeholder="Enter Schedule..."
+          ></textarea>
+          <button><i class="fas fa-plus"></i></button>
         </form>
         <!-- end of add schedule -->
       </div>
+
       <div id="container-2nd">
         <h2 class="title">Finished Schedules</h2>
         <!-- schedule -->
         <ul></ul>
       </div>
-    </div>
+    </section>
     <section>
       <footer class="footer">
         <div>
-          <p>&copy; 2021 My DayLike.</p>
+          <p>&copy;2021 MyDayLike.</p>
+
           <p style="word-spacing: 5px">
             <i
               class="fa fa-code"
-              style="color: red; cursor: help"
+              style="color: crimson; cursor: help"
               title="Developed "
             ></i>
             By
-            <a href="https://jnathan.com.ng">Nathan</a>
+            <a href="https://jnathan.com.ng" class="developer">Nathan</a>
+          </p>
+
+          <p>
             <span>
               <a href="https://twitter.com/Mr_Jumns"
                 ><i class="fab fa-twitter" title="Twitter"></i
@@ -102,6 +101,9 @@
               ></a>
               <a href="https://www.linkedin.com/in/nathan-jumns-1210801aa/"
                 ><i class="fab fa-linkedin" title="LinkedIn"></i
+              ></a>
+              <a href="https://www.github.com/Jumns"
+                ><i class="fab fa-github" title="Github"></i
               ></a>
             </span>
           </p>
